@@ -9,8 +9,8 @@ with open("README.md", "r") as fh:
 
 setup(
     name='wataash_utils',
-    version='0.1.0',
-    url='https://github.com/wsh/wataash_utils',
+    version='0.1.1',
+    url='https://github.com/wataash/wataash_utils_py',
     author='Wataru Ashihara',
     author_email='wataash@wataash.com',
     classifiers=[

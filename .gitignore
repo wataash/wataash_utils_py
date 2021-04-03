@@ -1,2 +1,4 @@
+/build/
+/dist/
 /wataash_utils.egg-info/
 /wataash_utils/__pycache__/
