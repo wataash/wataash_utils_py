@@ -1,6 +1,9 @@
 # SPDX-License-Identifier: Apache-2.0
 
-def cat_and(strings: list[str]) -> str:
+import typing as t
+
+
+def cat_and(strings: t.List[str]) -> str:
     """
     >>> cat_and([])
     ''
@@ -22,7 +25,7 @@ def cat_and(strings: list[str]) -> str:
     return ', '.join(strings[:-1]) + f', and {strings[-1]}'
 
 
-def cat_or(strings: list[str]) -> str:
+def cat_or(strings: t.List[str]) -> str:
     """
     >>> cat_or([])
     ''
