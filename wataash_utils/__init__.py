@@ -1,9 +1,18 @@
 # SPDX-License-Identifier: Apache-2.0
 
-from wataash_utils.logger import logger
+import wataash_utils.json
 import wataash_utils.logger
+try:
+    import wataash_utils.requests
+except ImportError:  # requests
+    pass
 import wataash_utils.pycharm
 import wataash_utils.str
+
+# -----------------------------------------------------------------------------
+# misc
+
+from wataash_utils.logger import logger
 
 
 def warn_cr(file: str, txt: str) -> None:
