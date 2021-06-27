@@ -1,13 +1,21 @@
 # SPDX-License-Identifier: Apache-2.0
 
+import wataash_utils._exp
+import wataash_utils.click
 import wataash_utils.json
 import wataash_utils.logger
+import wataash_utils.python
+import wataash_utils.pycharm
+import wataash_utils.str
+
 try:
     import wataash_utils.requests
 except ImportError:  # requests
     pass
-import wataash_utils.pycharm
-import wataash_utils.str
+try:
+    import wataash_utils.selenium
+except ImportError:  # selenium
+    pass
 
 # -----------------------------------------------------------------------------
 # misc

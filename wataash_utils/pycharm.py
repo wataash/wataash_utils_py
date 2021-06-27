@@ -11,8 +11,9 @@ def connect(port=12345):
                             suspend=False)
 
 
-def connect_if_env(port=12345, env='CONNECT_PYCHARM'):
+def connect_if_env(port=12345, env='CONNECT_PYCHARM') -> bool:
     if os.getenv(env) != '1':
-        return
+        return False
 
     connect()
+    return True
