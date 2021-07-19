@@ -23,11 +23,16 @@ def opts_exclusive(ctx: click.Context, *args: t.Tuple[str, bool]):
 
 def opts_need_any(ctx: click.Context, *args: t.Tuple[str, bool]):
     if len(args) in [0, 1]:
-        raise Exception(f'len(args):{len(args)} must be >= 2')
+        raise ValueError(f'len(args):{len(args)} must be >= 2')
     if len([True for x in args if x[1]]) != 0:
         return
     msg = f'one of following options needed: {wu.str.cat_or([x[0] for x in args])}'
     raise click.UsageError(msg, ctx=ctx)
+
+
+def opts_need_one(ctx: click.Context, *args: t.Tuple[str, bool]):
+    opts_exclusive(ctx, *args)
+    opts_need_any(ctx, *args)
 
 
 def parse_date_ym_slash(ctx: click.Context, ym, opt: t.Optional[str] = None) -> t.Tuple[int, int]:
