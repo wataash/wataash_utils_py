@@ -4,7 +4,7 @@ import json
 import typing as t
 
 from wataash_utils.json import JSON
-from wataash_utils.logger import logger
+from wataash_utils.logging import logger
 from wataash_utils.str import partial_str
 import requests
 

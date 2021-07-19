@@ -3,7 +3,7 @@
 import wataash_utils._exp
 import wataash_utils.click
 import wataash_utils.json
-import wataash_utils.logger
+import wataash_utils.logging
 import wataash_utils.python
 import wataash_utils.pycharm
 import wataash_utils.str
@@ -20,7 +20,7 @@ except ImportError:  # selenium
 # -----------------------------------------------------------------------------
 # misc
 
-from wataash_utils.logger import logger
+from wataash_utils.logging import logger
 
 
 def warn_cr(file: str, txt: str) -> None:
