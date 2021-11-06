@@ -9,14 +9,13 @@ with open("README.md", "r") as fh:
 
 setup(
     name='wataash_utils',
-    version='0.3.0',
+    version='0.3.1',
     url='https://github.com/wataash/wataash_utils_py',
     author='Wataru Ashihara',
     author_email='wataash@wataash.com',
     classifiers=[
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
@@ -27,6 +26,7 @@ setup(
     install_requires=[
         'click>=8.0.1',
         'logzero>=1.6.3',
+        'wcwidth>=0.2.5',
     ],
     packages=find_packages(),
 )

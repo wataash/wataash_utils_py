@@ -47,6 +47,10 @@ def cat_or(strings: t.List[str]) -> str:
     return ', '.join(strings[:-1]) + f', or {strings[-1]}'
 
 
+def first_line(s: str) -> str:
+    return s[:s.find('\n')]
+
+
 def partial_str(s: str, width=100) -> str:
     """
     >>> partial_str('abcd', 5)
