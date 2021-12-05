@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import wataash_utils._exp
+import wataash_utils.argparse
 import wataash_utils.click
 import wataash_utils.json
 import wataash_utils.logging

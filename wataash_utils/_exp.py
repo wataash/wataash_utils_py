@@ -139,8 +139,8 @@ def parse_fixed_width_table(table: str) -> list[dict[str, str]]:
     >>> table = '''\
     ... hello         世界   world
     ...               1          2
-    ... 3                        4
-    ... 5
+    ...        3           abcdefghi
+    ... foo
     ... '''
     >>> print(table[:6])
         ..
@@ -148,18 +148,18 @@ def parse_fixed_width_table(table: str) -> list[dict[str, str]]:
     >>> table = '''
     ... hello         世界   world
     ...               1          2
-    ... 3                        4
-    ... 5
+    ...        3           abcdefghi
+    ... foo
     ... '''
     >>> print(table)
     <BLANKLINE>
     hello         世界   world
                   1          2
-    3                        4
-    5
+    3                    12345678
+    foo
     <BLANKLINE>
     >>> parse_fixed_width_table(table[1:])
-    [{'hello': '', '世界': '1', 'world': '2'}, {'hello': '3', '世界': '', 'world': '4'}, {'hello': '5', '世界': '', 'world': ''}]
+    [{'hello': '', '世界': '1', 'world': '2'}, {'hello': '3', '世界': 'ab', 'world': 'cdefghi'}, {'hello': 'foo', '世界': '', 'world': ''}]
 
     :param table:
     :return:
