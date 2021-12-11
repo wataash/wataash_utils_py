@@ -10,7 +10,7 @@ import wataash_utils as wu
 
 # HACK: terminal_width=999: to avoid wrapping in epilog
 ctx_settings = dict(help_option_names=['-h', '--help'], terminal_width=999)
-opt_defaults = {'show_envvar': True}
+opt_defaults = {'show_default': True, 'show_envvar': True}
 
 
 def opts_exclusive(ctx: click.Context, *args: t.Tuple[str, bool]):

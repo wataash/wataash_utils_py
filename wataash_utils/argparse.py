@@ -5,7 +5,13 @@ import logging
 import re
 import typing as t
 
+from wataash_utils.logging import logger
 import wataash_utils as wu
+
+
+def log_debug_args(args: list[str]):
+    for i, arg in enumerate(args):
+        logger.debug(f'arg[{i}]: {arg}')
 
 
 def opts_exclusive(parser: argparse.ArgumentParser, *args: t.Tuple[str, bool]):
