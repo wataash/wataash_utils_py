@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='wataash_utils',
-    version='0.4.0',
+    version='0.5.0',
     url='https://github.com/wataash/wataash_utils_py',
     author='Wataru Ashihara',
     author_email='wataash@wataash.com',
@@ -26,6 +26,7 @@ setup(
     install_requires=[
         'click>=8.0.1',
         'logzero>=1.6.3',
+        # 'selenium>=4.1.0',
         'wcwidth>=0.2.5',
     ],
     packages=find_packages(),

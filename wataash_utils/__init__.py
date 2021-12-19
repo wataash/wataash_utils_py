@@ -3,6 +3,7 @@
 import wataash_utils._exp
 import wataash_utils.argparse
 import wataash_utils.click
+import wataash_utils.collections
 import wataash_utils.json
 import wataash_utils.logging
 import wataash_utils.python
@@ -18,11 +19,11 @@ try:
 except ImportError:  # selenium
     pass
 
+from wataash_utils.logging import logger as _logger
+
+
 # -----------------------------------------------------------------------------
 # misc
-
-from wataash_utils.logging import logger
-
 
 def warn_cr(file: str, txt: str) -> None:
     pos_cr = txt.find('\r')
@@ -32,7 +33,4 @@ def warn_cr(file: str, txt: str) -> None:
                f'(made on Windows?); '
                f'only line-feed (LF; 0x0a) is supported as the new-line '
                f'character')
-        logger.warning(msg)
-
-
-del logger
+        _logger.warning(msg)
